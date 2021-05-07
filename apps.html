@@ -117,7 +117,7 @@ function GoToSearch() {
     function subscribe() {
       Notification.requestPermission().then(function(result) {
         console.log(result);
-        var img = '/to-do-notifications/img/icon-128.png';
+        var img = 'unnamed.ico';
         var text = 'Thank you for subscribing!';
         var notification = new Notification('Nathan Search', { body: text, icon: img });
       });
