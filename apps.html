@@ -92,6 +92,12 @@ settings_input_antenna
     text-decoration: none;
     color: black;
 ">Speedtest</a></button>
+  <button onclick="subscribe()" style="cursor: pointer; background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-color: #f2f2f2;border: 1px solid #f2f2f2;border-radius: 4px;color: #5F6368;font-family: arial,sans-serif;font-size: 14px;margin: 11px 4px;padding: 0 16px;line-height: 27px;height: 36px;min-width: 54px;text-align: center;cursor: pointer;user-select: none;height: 150px;width: 150px;"><span class="material-icons-outlined" style="
+    font-family: 'Google Material Icons';
+    font-size: 48px;
+">
+notfications
+  </span><br><span>Search</span></button>
   <div id="myModal" class="modal">
   <div class="modal-content">
     <div class="modal-header">
@@ -107,6 +113,16 @@ function GoToSearch() {
   location.replace("https://nathan-search.github.io")
 }
 </script>
+  <script>
+    function subscribe() {
+      Notification.requestPermission().then(function(result) {
+        console.log(result);
+        var img = '/to-do-notifications/img/icon-128.png';
+        var text = 'Thank you for subscribing!';
+        var notification = new Notification('Nathan Search', { body: text, icon: img });
+      });
+    }
+  </script>
   <script>
 // Get the modal
 var modal = document.getElementById("myModal");
